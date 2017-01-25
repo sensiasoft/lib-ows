@@ -63,7 +63,7 @@ public class SASAlertWriter
 			throw new OWSException("a timestamp must be provided");
 		
 		// alertData
-		if (timestamp != null)
+		if (alertData != null)
 			dom.setElementValue(rootElt, "AlertData", alertData);
 		else 
 			throw new OWSException("Alert data must be provided");
