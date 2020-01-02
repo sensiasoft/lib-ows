@@ -11,7 +11,12 @@
  
  The Original Code is the "OGC Service Framework".
  
- The Initial Developer of the Original Code is the VAST team at the University of Alabama in Huntsville (UAH). <http://vast.uah.edu> Portions created by the Initial Developer are Copyright (C) 2007 the Initial Developer. All Rights Reserved. Please Contact Alexandre Robin <alex.robin@sensiasoftware.com> or
+ The Initial Developer of the Original Code is the VAST team at the
+ University of Alabama in Huntsville (UAH). <http://vast.uah.edu>
+ Portions created by the Initial Developer are Copyright (C) 2007
+ the Initial Developer. All Rights Reserved.
+
+ Please Contact Alexandre Robin <alex.robin@sensiasoftware.com> or
  Mike Botts <mike.botts@uah.edu> for more information.
  
  Contributor(s): 
@@ -21,7 +26,7 @@
 
 package org.vast.ows;
 
-import org.vast.xml.*;
+import org.vast.xml.DOMHelper;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 

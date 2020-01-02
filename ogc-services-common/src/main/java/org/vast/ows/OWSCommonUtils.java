@@ -25,16 +25,16 @@
 
 package org.vast.ows;
 
+import org.vast.util.Bbox;
+import org.vast.util.DateTimeFormat;
+import org.vast.util.TimeExtent;
+
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
-import org.vast.ows.OWSException;
-import org.vast.util.Bbox;
-import org.vast.util.DateTimeFormat;
-import org.vast.util.TimeExtent;
 
 
 /**

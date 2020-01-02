@@ -21,11 +21,12 @@
 ******************************* END LICENSE BLOCK ***************************/
 package org.vast.ows;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import org.vast.util.DateTimeFormat;
 import org.vast.xml.DOMHelper;
 import org.w3c.dom.Element;
+
+import java.io.IOException;
+import java.io.OutputStream;
 
 
 /**

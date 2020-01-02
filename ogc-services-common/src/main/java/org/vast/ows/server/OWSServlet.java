@@ -11,7 +11,12 @@
  
  The Original Code is the "OGC Service Framework".
  
- The Initial Developer of the Original Code is the VAST team at the University of Alabama in Huntsville (UAH). <http://vast.uah.edu> Portions created by the Initial Developer are Copyright (C) 2007 the Initial Developer. All Rights Reserved. Please Contact Mike Botts <mike.botts@uah.edu>
+ The Initial Developer of the Original Code is the VAST team at the
+ University of Alabama in Huntsville (UAH). <http://vast.uah.edu>
+ Portions created by the Initial Developer are Copyright (C) 2007
+ the Initial Developer. All Rights Reserved.
+
+ Please Contact Mike Botts <mike.botts@uah.edu>
  or Alexandre Robin <alex.robin@sensiasoftware.com> for more information.
  
  Contributor(s): 
@@ -21,16 +26,6 @@
 
 package org.vast.ows.server;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.security.AccessControlException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.vast.ows.OWSException;
@@ -40,6 +35,13 @@ import org.vast.ows.OWSUtils;
 import org.vast.ows.util.PostRequestFilter;
 import org.vast.xml.DOMHelper;
 import org.w3c.dom.Element;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.security.AccessControlException;
 
 
 /**

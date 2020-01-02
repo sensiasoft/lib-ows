@@ -7,6 +7,7 @@
    <Namespace type="SWES" version="2.0" uri="http://www.opengis.net/swes/2.0"/>
    <Namespace type="SLD" version="*" uri="http://www.opengis.net/sld"/>
    <Namespace type="WMS" version="*" uri="http://www.opengis.net/wms" ows="0.0"/>
+   <Namespace type="WMTS" version="1.0.0" uri="http://www.opengis.net/wmts/1.0" ows="1.1"/>
    <Namespace type="WCS" version="1.0" uri="http://www.opengis.net/wcs" ows="1.0"/>
    <Namespace type="WCS" version="1.1.1" uri="http://www.opengis.net/wcs/1.1.1" ows="1.1"/>
    <Namespace type="CSW" version="1.0" uri="http://www.opengis.net/cat/csw"/>
@@ -20,4 +21,8 @@
    <Reader type="*" subType="GetCapabilities" version="*" class="org.vast.ows.GetCapabilitiesReader"/>
    <Writer type="*" subType="GetCapabilities" version="*" class="org.vast.ows.GetCapabilitiesWriter"/>
    <!-- -->
+
+   <Reader type="WMTS" subType="GetTile" version="1.0.0" class="org.vast.ows.wmts.GetTileReaderV10"/>
+   <Reader type="WMTS" subType="GetFeatureInfo" version="1.0.0" class="org.vast.ows.wmts.GetFeatureInfoReaderV10"/>
+   <Writer type="WMTS" subType="GetTile" version="1.0.0" class="org.vast.ows.wmts.GetTileWriterV10"/>
 </Map>

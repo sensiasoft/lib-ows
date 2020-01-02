@@ -11,7 +11,12 @@
  
  The Original Code is the "OGC Service Framework".
  
- The Initial Developer of the Original Code is the VAST team at the University of Alabama in Huntsville (UAH). <http://vast.uah.edu> Portions created by the Initial Developer are Copyright (C) 2007 the Initial Developer. All Rights Reserved. Please Contact Mike Botts <mike.botts@uah.edu> for more information.
+ The Initial Developer of the Original Code is the VAST team at the
+ University of Alabama in Huntsville (UAH). <http://vast.uah.edu>
+ Portions created by the Initial Developer are Copyright (C) 2007
+ the Initial Developer. All Rights Reserved.
+
+ Please Contact Mike Botts <mike.botts@uah.edu> for more information.
  
  Contributor(s): 
     Alexandre Robin <robin@nsstc.uah.edu>
@@ -20,19 +25,22 @@
 
 package org.vast.ows;
 
-import java.io.*;
+import org.vast.util.Bbox;
+import org.vast.util.DateTimeFormat;
+import org.vast.util.TimeExtent;
+import org.vast.xml.DOMHelper;
+import org.w3c.dom.Element;
+
+import javax.xml.namespace.QName;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import javax.xml.namespace.QName;
-import org.w3c.dom.*;
-import org.vast.xml.DOMHelper;
-import org.vast.util.Bbox;
-import org.vast.util.DateTimeFormat;
-import org.vast.util.TimeExtent;
 
 
 /**

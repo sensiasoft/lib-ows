@@ -14,11 +14,7 @@ Copyright (C) 2012-2015 Sensia Software LLC. All Rights Reserved.
 
 package org.vast.ows.fes;
 
-import net.opengis.fes.v20.BBOX;
-import net.opengis.fes.v20.BinarySpatialOp;
-import net.opengis.fes.v20.BinaryTemporalOp;
-import net.opengis.fes.v20.GMLExpression;
-import net.opengis.fes.v20.TemporalOperatorName;
+import net.opengis.fes.v20.*;
 import net.opengis.fes.v20.impl.FESFactory;
 import net.opengis.gml.v32.AbstractTimeGeometricPrimitive;
 import net.opengis.gml.v32.Envelope;

@@ -25,9 +25,11 @@
 
 package org.vast.ows.wms;
 
-import org.w3c.dom.*;
-import org.vast.ows.*;
+import org.vast.ows.OWSException;
+import org.vast.ows.OWSExceptionReport;
 import org.vast.xml.DOMHelper;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 
 /**
