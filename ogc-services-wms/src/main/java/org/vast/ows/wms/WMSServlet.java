@@ -24,11 +24,11 @@ Alexandre Robin <alexandre.robin@spotimage.fr>
 
 package org.vast.ows.wms;
 
+import org.vast.ows.GetCapabilitiesRequest;
 import org.vast.ows.OWSException;
 import org.vast.ows.OWSRequest;
 import org.vast.ows.OWSUtils;
 import org.vast.ows.server.OWSServlet;
-import org.vast.ows.wms.GetMapRequest;
 
 
 /**
@@ -49,9 +49,14 @@ public abstract class WMSServlet extends OWSServlet
 	@Override
     public void handleRequest(OWSRequest request) throws OWSException
     {
-        if (request instanceof GetMapRequest)
+        if (request.getClass() == GetMapRequest.class)
         {
             processQuery((GetMapRequest) request);
+        } else if (request instanceof GetCapabilitiesRequest)
+        {
+            processQuery((GetCapabilitiesRequest) request);
+        }  else if (request.getClass() == GetFeatureInfoRequest.class) {
+            processQuery((GetFeatureInfoRequest) request);
         }
         else
             throw new OWSException("Unsupported operation " + request.getOperation());
@@ -59,4 +64,9 @@ public abstract class WMSServlet extends OWSServlet
 
 
     public abstract void processQuery(GetMapRequest request) throws OWSException;
+
+    public abstract void processQuery(GetCapabilitiesRequest request) throws OWSException;
+
+    public abstract void processQuery(GetFeatureInfoRequest request) throws OWSException;
+
 }

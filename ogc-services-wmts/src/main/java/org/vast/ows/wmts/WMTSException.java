@@ -23,7 +23,7 @@
  
 ******************************* END LICENSE BLOCK ***************************/
 
-package org.vast.ows.wms;
+package org.vast.ows.wmts;
 
 import org.vast.ows.OWSException;
 
@@ -33,12 +33,9 @@ import org.vast.ows.OWSException;
  * Exception object to carry WMS error messages.
  * </p>
  *
- * @author Alex Robin <alex.robin@sensiasoftware.com>
- * @date 07 jul. 06
  * */
-public class WMSException extends OWSException
+public class WMTSException extends OWSException
 {
-	static final long serialVersionUID = 0x0D57D045A3588AE34L;
 	public final static String invalid_format_code = "InvalidFormat";
 	public final static String invalid_format_text = "Invalid Format: ";
 	public final static String invalid_srs_code = "InvalidSRS";
@@ -48,26 +45,27 @@ public class WMSException extends OWSException
 	public final static String invalid_style_code = "StyleNotDefined";
 	public final static String invalid_style_text = "Unknown Style: ";
 	public final static String layer_not_queryable = "Layer not queryable";
-	
-	public WMSException(String message)
+
+
+	public WMTSException(String message)
 	{
 		super(message);
 	}
-	
-	
-	public WMSException(String message, Throwable cause)
+
+
+	public WMTSException(String message, Throwable cause)
 	{
 		super(message, cause);
 	}
-	
-	
-	public WMSException(String code, String locator)
+
+
+	public WMTSException(String code, String locator)
 	{
 		super(code, locator, (String)null, (String)null);
 	}
-	
-	
-	public WMSException(String code, String locator, String badValue, String message)
+
+
+	public WMTSException(String code, String locator, String badValue, String message)
 	{
 		super(code, locator, badValue, message);
 	}
@@ -91,8 +89,6 @@ public class WMSException extends OWSException
 			return invalid_layer_text + ((badValue == null) ? "" : badValue);
 		else if (this.code == invalid_style_code)
 			return invalid_style_text + ((badValue == null) ? "" : badValue);
-		else if (this.code == layer_not_queryable)
-			return layer_not_queryable + ((badValue == null) ? "" : badValue);
 		else
 			return null;
 	}

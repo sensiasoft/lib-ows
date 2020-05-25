@@ -14,13 +14,6 @@ Copyright (C) 2012-2015 Sensia Software LLC. All Rights Reserved.
 
 package org.vast.ows.fes;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.regex.Pattern;
-import javax.xml.stream.XMLStreamReader;
-import javax.xml.stream.XMLStreamWriter;
-import javax.xml.transform.dom.DOMResult;
-import javax.xml.transform.dom.DOMSource;
 import net.opengis.fes.v20.BinarySpatialOp;
 import net.opengis.fes.v20.BinaryTemporalOp;
 import net.opengis.fes.v20.FilterCapabilities;
@@ -34,6 +27,14 @@ import org.vast.xml.XMLImplFinder;
 import org.vast.xml.XMLReaderException;
 import org.vast.xml.XMLWriterException;
 import org.w3c.dom.Element;
+
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.stream.XMLStreamWriter;
+import javax.xml.transform.dom.DOMResult;
+import javax.xml.transform.dom.DOMSource;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 
 public class FESUtils extends OWSCommonUtils

@@ -11,7 +11,12 @@
  
  The Original Code is the "OGC Service Framework".
  
- The Initial Developer of the Original Code is the VAST team at the University of Alabama in Huntsville (UAH). <http://vast.uah.edu> Portions created by the Initial Developer are Copyright (C) 2007 the Initial Developer. All Rights Reserved. Please Contact Mike Botts <mike.botts@uah.edu> for more information.
+ The Initial Developer of the Original Code is the VAST team at the
+ University of Alabama in Huntsville (UAH). <http://vast.uah.edu>
+ Portions created by the Initial Developer are Copyright (C) 2007
+ the Initial Developer. All Rights Reserved.
+
+ Please Contact Mike Botts <mike.botts@uah.edu> for more information.
  
  Contributor(s): 
     Alexandre Robin <alexandre.robin@spotimage.fr>
@@ -20,15 +25,19 @@
 
 package org.vast.ows.wms;
 
-import java.awt.Color;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
+import org.vast.ows.AbstractRequestReader;
+import org.vast.ows.OWSException;
+import org.vast.ows.OWSExceptionReport;
+import org.vast.ows.OWSUtils;
 import org.vast.util.Bbox;
 import org.vast.util.TimeExtent;
 import org.vast.xml.DOMHelper;
-import org.w3c.dom.*;
-import org.vast.ows.*;
+import org.w3c.dom.Element;
+
+import java.awt.*;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 
 /**

@@ -14,10 +14,10 @@ Copyright (C) 2012-2015 Sensia Software LLC. All Rights Reserved.
 
 package org.vast.ows.fes;
 
-import org.vast.ogc.gml.GMLStaxBindings;
 import net.opengis.fes.v20.Factory;
-import net.opengis.fes.v20.impl.FESFactory;
 import net.opengis.fes.v20.bind.XMLStreamBindings;
+import net.opengis.fes.v20.impl.FESFactory;
+import org.vast.ogc.gml.GMLStaxBindings;
 
 
 /**
@@ -41,8 +41,8 @@ public class FESStaxBindings extends XMLStreamBindings
     {
         super(new FESFactory(), new GMLStaxBindings(useJTS));
         nsContext = gmlBindings.getNamespaceContext();
-        nsContext.registerNamespace("fes", net.opengis.fes.v20.bind.XMLStreamBindings.NS_URI);
-        nsContext.registerNamespace("ows", net.opengis.fes.v20.bind.XMLStreamBindings.OWS_NS_URI);
+        nsContext.registerNamespace("fes", XMLStreamBindings.NS_URI);
+        nsContext.registerNamespace("ows", XMLStreamBindings.OWS_NS_URI);
     }
     
     
